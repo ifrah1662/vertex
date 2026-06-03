@@ -7,11 +7,15 @@
     <title>Vertex - Advocate High Court & Corporate Consultant</title>
     <meta name="description"
         content="Vertex provides complete legal and corporate solutions under one roof. Expert advisory, transparency, and speed for your business.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap"
         rel="stylesheet">
     <!-- Main Style -->
     <link rel="stylesheet" href="style.css">
@@ -20,17 +24,25 @@
 <body>
     <header id="navbar">
         <nav class="container">
-            <div class="logo">
-                <span class="logo-text">VERTEX</span>
+            <a href="#home" class="logo-link">
+                <img src="logo.jpg" alt="Vertex Law Firm & Corporate Consultant Karachi - Advocate Noman Ramzan Mayo" class="logo-img">
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-cta">
-                <a href="#contact" class="btn btn-outline">Book Consultation</a>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#services" data-i18n="nav_services">Services</a></li>
+                    <li><a href="#about" data-i18n="nav_about">About Us</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <button id="langToggle" class="btn btn-outline lang-btn">اردو</button>
+                    <a href="#contact" class="btn btn-outline" data-i18n="btn_book">Book Consultation</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -39,13 +51,26 @@
         <section id="home" class="hero">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <p class="hero-tagline fade-in">Advocate High Court & Corporate Consultant</p>
-                    <h1 class="fade-in">Complete Legal & Corporate Solutions – <span class="accent">Under One
-                            Roof</span></h1>
-                    <p class="subtitle fade-in">Your Business, Our Expertise.</p>
+                    <p class="hero-tagline fade-in" data-i18n="hero_tagline">Comprehensive legal support</p>
+                    <h1 class="fade-in hero-title" data-i18n="hero_title">The Guarantor of Your Success</h1>
                     <div class="hero-btns fade-in">
-                        <a href="#services" class="btn btn-gold">Explore Services</a>
-                        <a href="#contact" class="btn btn-text">Get in Touch →</a>
+                        <a href="#services" class="btn btn-gold" data-i18n="btn_explore">Explore Services</a>
+                        <a href="#contact" class="btn btn-text" data-i18n="btn_get_in_touch">Get in Touch →</a>
+                    </div>
+
+                    <div class="hero-stats fade-in">
+                        <div class="stat-item">
+                            <h3 class="stat-num">100</h3>
+                            <p class="stat-desc" data-i18n="stat_cases">Companies in service</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-num">20</h3>
+                            <p class="stat-desc" data-i18n="stat_years">Received licenses</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-num">12</h3>
+                            <p class="stat-desc" data-i18n="stat_lawyers">Professional lawyers</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,68 +78,124 @@
             <div class="hero-image-placeholder" id="hero-img"></div>
         </section>
 
+        <!-- Services & Complimentary Offerings Section -->
         <section id="services" class="services section-padding">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="title">Our Specialized Services</h2>
-                    <p class="subtitle">Comprehensive legal and corporate consultancy tailored for your needs.</p>
+                
+                <!-- 1. Highlighted Subsection: Free Services -->
+                <div class="free-services-highlighted-box">
+                    <div class="free-services-header">
+                        <span class="free-tagline" data-i18n="free_subtitle">Complimentary Offerings</span>
+                        <h2 class="free-title" data-i18n="free_title">Free Services</h2>
+                    </div>
+                    
+                    <div class="free-services-grid">
+                        <article class="free-service-card">
+                            <div>
+                                <div class="free-icon-box">🤝</div>
+                                <h3 data-i18n="fs1_title">Initial Business & Legal Consultation</h3>
+                                <p data-i18n="fs1_desc" class="free-card-desc">Free guidance and strategic planning on how to legally register and structure your new startup or business in Pakistan.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline free-card-btn" data-i18n="fs_btn">Get Free Advice</a>
+                        </article>
+                        
+                        <article class="free-service-card">
+                            <div>
+                                <div class="free-icon-box">🔍</div>
+                                <h3 data-i18n="fs2_title">FBR Tax Filer Status Verification</h3>
+                                <p data-i18n="fs2_desc" class="free-card-desc">Instant online check and confirmation of Active Taxpayer List (ATL) status for individuals or corporate entities.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline free-card-btn" data-i18n="fs_btn">Get Free Advice</a>
+                        </article>
+                        
+                        <article class="free-service-card">
+                            <div>
+                                <div class="free-icon-box">📑</div>
+                                <h3 data-i18n="fs3_title">Tax Document Vetting & Review</h3>
+                                <p data-i18n="fs3_desc" class="free-card-desc">Basic inspection of your existing legal or tax documents to detect missing compliance requirements before filing.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline free-card-btn" data-i18n="fs_btn">Get Free Advice</a>
+                        </article>
+                        
+                        <article class="free-service-card">
+                            <div>
+                                <div class="free-icon-box">✔️</div>
+                                <h3 data-i18n="fs4_title">Name Availability Check</h3>
+                                <p data-i18n="fs4_desc" class="free-card-desc">Free initial screening to check if your desired business or company name is available for registration at SECP and IPO.</p>
+                            </div>
+                            <a href="#contact" class="btn btn-outline free-card-btn" data-i18n="fs_btn">Get Free Advice</a>
+                        </article>
+                    </div>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="icon-box">📊</div>
-                        <h3>Taxation & FBR</h3>
-                        <p>Comprehensive tax planning, filing, and consultancy for individuals and businesses.</p>
+
+                <!-- 2. Standard Subsection: Our Specialized Services -->
+                <div class="standard-services-box">
+                    <div class="section-header">
+                        <span class="services-tagline" data-i18n="services_subtitle">Core Corporate & Taxation Services</span>
+                        <h2 class="title" data-i18n="services_title">Our Specialized Services</h2>
                     </div>
-                    <div class="service-card">
-                        <div class="icon-box">🏙️</div>
-                        <h3>Provincial Tax (SRB)</h3>
-                        <p>Expert guidance on Sindh Revenue Board compliance and service tax matters.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">⚖️</div>
-                        <h3>Company Formation (SECP)</h3>
-                        <p>Streamlined registration and compliance for private and public companies.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">🛡️</div>
-                        <h3>Intellectual Property</h3>
-                        <p>Protection for your brands, marks, and innovations through trademark and copyright.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">📜</div>
-                        <h3>Trade Licensing (PSW)</h3>
-                        <p>Efficient handling of trade licenses and Pakistan Single Window registrations.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">🤝</div>
-                        <h3>NGO & Societies</h3>
-                        <p>Legal structure and registration for non-profits and social welfare organizations.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">🏢</div>
-                        <h3>Legal Consultancy</h3>
-                        <p>High Court advocacy and professional corporate advisory for all legal matters.</p>
+                    
+                    <div class="services-grid">
+                        <article class="service-card">
+                            <div class="icon-box">📊</div>
+                            <h3 data-i18n="srv1_title">FBR Enrollment</h3>
+                            <p data-i18n="srv1_desc">Quick registration for National Tax Number (NTN) and Sales Tax Registration Number (STRN) for individuals, AOPs, and companies.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="icon-box">🏙️</div>
+                            <h3 data-i18n="srv2_title">Provincial Revenue Boards (SRB / PRA)</h3>
+                            <p data-i18n="srv2_desc">Complete registration and compliance with Sindh Revenue Board and Punjab Revenue Authority for service-based industries.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="icon-box">🏛️</div>
+                            <h3 data-i18n="srv3_title">Chamber of Commerce Membership</h3>
+                            <p data-i18n="srv3_desc">Official registration and documentation with the local Chamber of Commerce to authenticate your business trade.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="icon-box">⚖️</div>
+                            <h3 data-i18n="srv4_title">SECP Company Registration</h3>
+                            <p data-i18n="srv4_desc">End-to-end setup of Private Limited, Single Member, or Public Limited companies with the Securities and Exchange Commission of Pakistan.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="icon-box">📜</div>
+                            <h3 data-i18n="srv5_title">PSW & WEBOC Import/Export Setup</h3>
+                            <p data-i18n="srv5_desc">Complete profile creation and digital license acquisition through the Pakistan Single Window for international trade operations.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="icon-box">⚙️</div>
+                            <h3 data-i18n="srv6_title">PEC Contractor License</h3>
+                            <p data-i18n="srv6_desc">Specialized registration and license upgrades with the Pakistan Engineering Council for construction firms and engineers.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="icon-box">🛡️</div>
+                            <h3 data-i18n="srv7_title">IPO Brand Protection</h3>
+                            <p data-i18n="srv7_desc">Secure your business identity with quick registration of Logos, Trademarks, Copyrights, and Patents through the Intellectual Property Organization.</p>
+                        </article>
+                        <article class="service-card">
+                            <div class="icon-box">🤝</div>
+                            <h3 data-i18n="srv8_title">NGO & Trust Registration</h3>
+                            <p data-i18n="srv8_desc">Authorized legal drafting and registration for non-profit organizations, welfare societies, and charitable trusts.</p>
+                        </article>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <section id="about" class="about section-padding">
             <div class="container about-container">
                 <div class="about-content">
-                    <h2 class="title">Why Choose <span class="accent">Us</span></h2>
-                    <p class="about-subtitle">Advocate High Court & Corporate Consultant</p>
-                    <p class="desc">At the office of Vertex, we believe in a client-first approach. Our commitment to
-                        transparency, speed, and expert advisory has made us a trusted partner for businesses across
-                        Pakistan.</p>
+                    <h2 class="title" data-i18n="about_title">Why People Choose Our Company and Not Others?</h2>
+                    <p class="about-subtitle" data-i18n="about_subtitle">Advocate High Court & Corporate Consultant</p>
+                    <p class="desc" data-i18n="about_desc">At the office of Vertex, we believe in a client-first approach. Our commitment to transparency, speed, and expert advisory has made us a trusted partner for businesses across Pakistan.</p>
                     <div class="milestones">
                         <div class="milestone">
-                            <span class="number">800+</span>
-                            <span class="label">Successful Clients</span>
+                            <span class="number">1500+</span>
+                            <span class="label" data-i18n="ms1_label">Successful Clients</span>
                         </div>
                         <div class="milestone">
                             <span class="number">Since 2020</span>
-                            <span class="label">Proven Excellence</span>
+                            <span class="label" data-i18n="ms2_label">Proven Excellence</span>
                         </div>
                     </div>
                 </div>
@@ -125,35 +206,51 @@
         <section id="contact" class="contact section-padding">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="title">Book a Consultation</h2>
-                    <p class="subtitle">Take the first step towards securing your corporate future.</p>
+                    <h2 class="title" data-i18n="contact_title">Book a Consultation</h2>
+                    <p class="subtitle" data-i18n="contact_subtitle">Take the first step towards securing your corporate future.</p>
                 </div>
                 <div class="contact-wrapper">
                     <div class="contact-form-box">
-                        <form id="contact-form">
+                        <form action="contact.php" method="POST" id="contact-form">
                             <div class="form-group">
-                                <input type="text" placeholder="Your Name" required>
+                                <input type="text" name="Name" id="form_name" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email Address" required>
+                                <input type="email" name="Email" id="form_email" placeholder="Email Address" required>
                             </div>
                             <div class="form-group">
-                                <textarea placeholder="How can we help you?" rows="5" required></textarea>
+                                <input type="text" name="Subject" id="form_subject" placeholder="Subject" required>
                             </div>
-                            <button type="submit" class="btn btn-gold full-width">Send Message</button>
+                            <div class="form-group">
+                                <textarea name="Message" id="form_msg" placeholder="How can we help you?" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-gold full-width" data-i18n="btn_send">Send Message</button>
+                            <div id="form-response-msg" class="form-response-msg"></div>
                         </form>
                     </div>
                     <div class="contact-info">
                         <div class="info-item">
-                            <h3>📍 Office</h3>
-                            <p>Karachi, Pakistan</p>
+                            <h3 data-i18n="info_office_karachi">📍 Karachi Office</h3>
+                            <p data-i18n="info_city_karachi">Suit No.710, 7th Floor, Insaf Chamber, Light House, Karachi, Sindh</p>
                         </div>
                         <div class="info-item">
-                            <h3>📧 Email</h3>
-                            <p>office@vertex.example.com</p>
+                            <h3 data-i18n="info_office_tando">📍 Tando Allahyar Office</h3>
+                            <p data-i18n="info_city_tando">Near Session Court Tando Allahyar</p>
                         </div>
-                        <div class="map-placeholder">
-                            <p>Karachi Map Integration Placeholder</p>
+                        <div class="info-item">
+                            <h3 data-i18n="info_email">📧 Email</h3>
+                            <p class="contact-email-row"><a href="mailto:nomanrajput292@gmail.com" class="contact-link">nomanrajput292@gmail.com</a></p>
+                            <p class="contact-email-row"><a href="mailto:vertexpvtltd01@gmail.com" class="contact-link">vertexpvtltd01@gmail.com</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h3 data-i18n="info_person1">👨‍⚖️ Noman Ramzan Meo</h3>
+                            <p data-i18n="info_title1" class="contact-person-title">Advocate High Court/Founder</p>
+                            <p class="contact-phone-row">📞 <a href="https://wa.me/923063096292" target="_blank" class="whatsapp-link">0306-3096292</a> / <a href="https://wa.me/923123775616" target="_blank" class="whatsapp-link">0312-3775616</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h3 data-i18n="info_person2">👨‍💼 M. Imran Meo</h3>
+                            <p data-i18n="info_title2" class="contact-person-title">Tax Consultant</p>
+                            <p class="contact-phone-row">📞 <a href="https://wa.me/923043382144" target="_blank" class="whatsapp-link">0304-3382144</a></p>
                         </div>
                     </div>
                 </div>
@@ -164,14 +261,33 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2024 Vertex - Advocate & Consultant. All rights reserved.</p>
+                <p data-i18n="footer_copy">&copy; 2024 Vertex - Advocate & Consultant. All rights reserved.</p>
                 <ul class="social-links">
+                    <li><a href="https://www.facebook.com/profile.php?id=61552003565976" target="_blank">Facebook</a></li>
                     <li><a href="#">LinkedIn</a></li>
                     <li><a href="#">Twitter</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+
+    <!-- Chatbot HTML -->
+    <div class="chatbot-wrapper" id="chatbotWrapper">
+        <div class="chatbot-header" id="chatbotHeader">
+            <span data-i18n="chat_title">Legal Assistant ⚖️</span>
+            <button id="chatbotClose">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="bot-msg">
+                <span data-i18n="chat_welcome">Hello! I am your legal assistant. How can I help you today with Pakistani law or corporate matters? (You can ask in English or Urdu)</span>
+            </div>
+        </div>
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbotInput" placeholder="Type your question..." />
+            <button id="chatbotSend" data-i18n="chat_send">Send</button>
+        </div>
+    </div>
+    <button class="chatbot-toggle" id="chatbotToggle">💬</button>
 
     <script src="main.js"></script>
 </body>
